@@ -1,3 +1,5 @@
+import { ProductosService } from './services/productos.service';
+import { InfoPaginaService } from './services/info-pagina.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(public infoPagina: InfoPaginaService, public infoProducts: ProductosService) {
+
+  }
+
   title = 'portafolio';
 }
